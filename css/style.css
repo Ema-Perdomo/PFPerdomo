@@ -1,10 +1,11 @@
-/*Variables*/
 /* Reset de estilo. */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
+/* Titulos */
+/* Textos */
 html {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #96af70;
@@ -14,7 +15,6 @@ html {
 main {
   background-color: #96af70; }
 
-/* Titulos */
 h1 {
   text-emphasis: bold;
   font-size: 2rem; }
@@ -47,12 +47,12 @@ header {
   .presentacion p {
     width: 100%;
     font-size: 1.2rem;
-    color: #cac9c9; }
+    color: rgba(255, 255, 255, 0.808); }
 
 .parrafoDos li {
   width: 100%;
   font-size: 1.2rem;
-  color: #cac9c9; }
+  color: rgba(255, 255, 255, 0.808); }
 
 .ministerio-img {
   width: 50%; }
@@ -93,7 +93,7 @@ footer {
   .presentacion p {
     width: 100%;
     font-size: 0.95em;
-    color: #cac9c9; }
+    color: rgba(255, 255, 255, 0.808); }
   /* Texto tablet */
   .parrafoDos li {
     font-size: 0.95em; } }
@@ -103,9 +103,11 @@ footer {
     margin-bottom: 1rem;
     padding: 1rem; }
     .presentacion h1 {
+      text-emphasis: bold;
+      font-size: 2rem;
       font-size: 1rem; }
     .presentacion p {
-      color: #cac9c9;
+      color: rgba(255, 255, 255, 0.808);
       font-size: 0.9em; }
   /* Texto mobile */
   .parrafoDos {

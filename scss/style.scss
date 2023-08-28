@@ -1,33 +1,15 @@
-/*Variables*/
-// @import "variables";
-$color_1: black;
-$color_2: rgba(255, 255, 255, 0.808);
-$color_3: rgb(202, 201, 201);
-$font-family_1: Arial, Helvetica, sans-serif;
-$background-color_1: rgb(150, 175, 112);
-$background-color_2: rgba(0, 0, 0, 0.171);
-$background-color_3: rgb(123, 155, 76);
+@import "reset";
+@import "variables";
 
-// @mixin titulos {
-//     h1{
-//         font-size: ;
-//         color: ;
-//     }
-//     h2 {
-
-//     }
-//     h3 {
-
-//     }
-// }
-
-/* Reset de estilo. */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+/* Titulos */
+@mixin titulos {
+	text-emphasis: bold;
+	font-size: 2rem;
 }
-
+/* Textos */
+@mixin texto{
+	
+}
 html {
 	font-family: $font-family_1;
 	background-color: $background-color_1;
@@ -37,10 +19,8 @@ html {
 main {
 	background-color: $background-color_1;
 }
-/* Titulos */
 h1 {
-	text-emphasis: bold;
-	font-size: 2rem;
+	@include titulos;
 }
 .card {
 	background-color: $background-color_2;
@@ -72,7 +52,7 @@ header {
 	p {
 		width: 100%;
 		font-size: 1.2rem;
-		color: $color_3;        
+		color: $color_2;        
 	}
 }
 //Items de texto en presentacion
@@ -80,7 +60,7 @@ header {
     li {
         width: 100%;
         font-size: 1.2rem;
-        color: $color_3;
+        color: $color_2;
     }
 }
 
@@ -132,7 +112,7 @@ footer {
 		p {
 			width: 100%;
 			font-size: 0.95em;
-			color: $color_3;
+			color: $color_2;
 		}
 	}
     /* Texto tablet */
@@ -148,10 +128,11 @@ footer {
 		margin-bottom: 1rem;
 		padding: 1rem;
 		h1 {
+			@include titulos;
 			font-size: 1rem;
 		}
 		p {
-			color: $color_3;
+			color: $color_2;
 			font-size: 0.9em;
 		}
 	}
