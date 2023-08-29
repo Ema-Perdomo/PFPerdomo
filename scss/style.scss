@@ -7,9 +7,16 @@
 	font-size: 2rem;
 }
 /* Textos */
-@mixin texto{
-	
-}
+// @mixin texto{
+
+// }
+/*
+
+ANIMACION CARDS PUBLICACVIONES
+
+
+
+*/
 html {
 	font-family: $font-family_1;
 	background-color: $background-color_1;
@@ -21,6 +28,10 @@ main {
 }
 h1 {
 	@include titulos;
+}
+h2{
+	@extend h1;
+	font-size: 1.8rem;
 }
 .card {
 	background-color: $background-color_2;
@@ -52,7 +63,7 @@ header {
 	p {
 		width: 100%;
 		font-size: 1.2rem;
-		color: $color_2;        
+		color: $color_2;
 	}
 }
 //Items de texto en presentacion
@@ -78,9 +89,50 @@ header {
 }
 .imagenChica {
 	width: 100%;
-	height: 100%; 
+	height: 100%;
 }
 
+@media screen and (max-width: $tablet) {
+	.presentacion {
+		p {
+			width: 100%;
+			font-size: 0.95em;
+			color: $color_2;
+		}
+	}
+    /* Texto tablet */
+    .parrafoDos {
+        li {
+            font-size: 0.95em;
+        }
+
+    }
+}
+@media screen and (max-width: $mobile ) {
+	.presentacion {
+		margin-bottom: 1rem;
+		padding: 1rem;
+		h1 {
+			@include titulos;
+			font-size: 1rem;
+		}
+		p {
+			color: $color_2;
+			font-size: 0.9em;
+		}
+	}
+    /* Texto mobile */
+	.parrafoDos {
+		display: none;
+	}
+}
+/*Correccion estilos en linea (style="max-width: 1000px;")*/
+.ratio-16x9, .form-inline, .galeria{
+	max-width: 1000px;
+}
+.ratio-4x3 {
+	max-width:800px;
+}
 
 footer {
 	background-color: $background-color_1;
@@ -102,42 +154,4 @@ footer {
 	width: 50px;
 	height: 50px;
 	margin: .625rem;
-}
-
-@media (max-width: 768px) {
-
-}
-@media screen and (max-width: 768px) {
-	.presentacion {
-		p {
-			width: 100%;
-			font-size: 0.95em;
-			color: $color_2;
-		}
-	}
-    /* Texto tablet */
-    .parrafoDos {
-        li {
-            font-size: 0.95em;  
-        }
-        
-    }
-}
-@media screen and (max-width: 425px) {
-	.presentacion {
-		margin-bottom: 1rem;
-		padding: 1rem;
-		h1 {
-			@include titulos;
-			font-size: 1rem;
-		}
-		p {
-			color: $color_2;
-			font-size: 0.9em;
-		}
-	}
-    /* Texto mobile */
-	.parrafoDos {
-		display: none;
-	}
 }
